@@ -36,9 +36,12 @@ jobs:
         with:
           images: ${{ env.GHCR_IMAGE }}
           tags: |
-            type=semver,pattern={{version}}          # tag v1.2.3 → :1.2.3
-            type=raw,value=latest,enable={{is_default_branch}}  # main → :latest
-            type=sha                                 # main → :sha-<hash>
+            # tag v1.2.3 → :1.2.3
+            type=semver,pattern={{version}}
+            # main → :latest
+            type=raw,value=latest,enable={{is_default_branch}}
+            # tiap push → :sha-<hash>
+            type=sha
 
       - name: Build and push
         uses: docker/build-push-action@v7
