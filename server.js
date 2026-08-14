@@ -29,11 +29,11 @@ const SESSION_MODE = (process.env.SESSION_MODE || "fresh").trim().toLowerCase();
 const FORWARD_UA = (process.env.FORWARD_UA || "keep").trim().toLowerCase();
 
 // ─── model aliases ────────────────────────────────────────────────────────────
-// Panggil model cukup pakai alias, mis. "ds4f" → "deepseek-v4-flash-free".
+// Panggil model cukup pakai alias, mis. "telur-ceplok" → "deepseek-v4-flash-free".
 // Tambah alias sendiri via env MODEL_ALIASES (JSON), contoh:
-//   MODEL_ALIASES={"ds4f":"deepseek-v4-flash-free","mimo":"mimo-v2.5-free"}
+//   MODEL_ALIASES={"telur-ceplok":"deepseek-v4-flash-free","mimo":"mimo-v2.5-free"}
 const DEFAULT_ALIASES = {
-  ds4f: "deepseek-v4-flash-free",
+  "telur-ceplok": "deepseek-v4-flash-free",
 };
 function loadAliases() {
   try {

@@ -45,17 +45,17 @@ Panggil model cukup dengan alias — tidak perlu mengetik nama panjang:
 ```bash
 curl http://localhost:20128/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -d '{"model": "ds4f", "messages": [{"role": "user", "content": "hi"}]}'
+  -d '{"model": "telur-ceplok", "messages": [{"role": "user", "content": "hi"}]}'
 ```
 
 | Alias | Model asli |
 |---|---|
-| `ds4f` | `deepseek-v4-flash-free` |
+| `telur-ceplok` | `deepseek-v4-flash-free` |
 
 Alias default ada di `server.js` (`DEFAULT_ALIASES`). Tambah sendiri via env `MODEL_ALIASES` (JSON, override default):
 
 ```bash
-MODEL_ALIASES={"ds4f":"deepseek-v4-flash-free","mimo":"mimo-v2.5-free"}
+MODEL_ALIASES={"telur-ceplok":"deepseek-v4-flash-free","mimo":"mimo-v2.5-free"}
 ```
 
 Alias juga muncul di `/v1/models`, jadi bisa dipilih dari model picker client.
